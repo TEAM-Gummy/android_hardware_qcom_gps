@@ -6,9 +6,9 @@ LOCAL_SRC_FILES:= xdr.c rpc.c svc.c clnt.c ops.c svc_clnt_common.c
 
 LOCAL_C_INCLUDES:=$(LOCAL_PATH)
 
-LOCAL_CFLAGS:= -fno-short-enums 
+LOCAL_CFLAGS:= -fno-short-enums -fno-strict-aliasing
 
-LOCAL_CFLAGS+=-DRPC_OFFSET=0
+LOCAL_CFLAGS+=-DRPC_OFFSET=0 -fno-strict-aliasing
 #LOCAL_CFLAGS+=-DDEBUG -DVERBOSE
 
 LOCAL_COPY_HEADERS_TO:= librpc/rpc
